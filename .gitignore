@@ -1,1 +1,2 @@
-thirdparty/
+thirdparty/*
+!thirdparty/urls.md
