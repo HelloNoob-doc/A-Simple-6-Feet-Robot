@@ -9,7 +9,7 @@
 
 软件方面：主要分阶段设计和进行，以小项目为驱动。
 ### 项目规划
-详情见 ./plans/
+详情见 ./docs/plans/
 ### 日志文档结构说明
 包含./docs/logs/daily(每天日志)和./docs/logs/ai_summary(ai对话归档)(纯ai总结，为参考意义)
 ### Test文件夹说明
