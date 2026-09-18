@@ -1,0 +1,21 @@
+0918总结
+今天完成了主控版的软件烧录测试和舵机有效性测试
+主控板引脚、显示屏正常
+舵机需要18个，目前有16个，正常10个，噪声大2个，坏的4个
+目前的实现情况：
+1. 骨架未完成
+2. 设计test板子调试脚本并成功烧录测试
+3. 电机测试完毕
+4. 电池电源降压未解决
+
+今日ai归档文件：
+配置Arduino过程中踩坑等问题总结
+主要为
+1. 开源项目中仅有舵机校准代码，其文档中提到的舵机测试脚本不存在，需要自己书写
+2. 我们的主要舵机操控板为esp32板，如果需要安装esp32boards，Arduino内置安装可能
+存在网络无法连接到github源的问题，可以读取官方文档https://github.com/espressif/arduino-esp32
+参考其中安装步骤，或者让ai读取这个官方库让其按照其中的指示帮你安装
+3. 在使用显示屏调试脚本之前，需要下载TFT_eSPI库，并且在C:\Users\(UserName)\Documents\Arduino\libraries\TFT_eSPI\User_Setups
+中添加自定分辨率和引脚的.h头文件并且在C:\Users\(UserName)\Documents\Arduino\libraries\TFT_eSPI\User_Setup_Select.h
+中包含(include)并且仅包含此头文件
+4. 舵机测试脚本为单S16引脚测试，采用单引脚测试所有舵机的策略
